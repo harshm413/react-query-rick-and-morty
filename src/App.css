@@ -1,0 +1,103 @@
+/* App.css */
+
+.App {
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.text-container {
+    padding: 15px;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.status {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.title {
+    margin: 10px 0 5px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Add some responsive styles */
+@media screen and (max-width: 600px) {
+    .characters {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+.characters div {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically on small screens */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add some space between the characters and the buttons */
+    text-align: center;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Add some space between the characters and the buttons */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ddd;
+    color: #666;
+    cursor: not-allowed;
+}
